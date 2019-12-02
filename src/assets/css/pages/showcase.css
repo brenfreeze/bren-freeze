@@ -1,0 +1,23 @@
+.showcase-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 5rem 7rem;
+}
+
+.showcase-slider {
+  margin-top: 1.5rem;
+}
+
+.slick-slide {
+  margin-right: 1rem;
+}
+
+.showcase-item {
+  min-width: 300px;
+  height: 450px;
+
+  border: 2px solid lightgray;
+  border-radius: 20px;
+
+  outline: none;
+}

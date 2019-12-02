@@ -1,0 +1,13 @@
+:root {
+  --easing: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  font-family: 'Avenir', sans-serif;
+}
+
+body {
+  margin: 0;
+}

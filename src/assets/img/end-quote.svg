@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="169px" height="128px" viewBox="0 0 169 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>end quote</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="quotes" transform="translate(-191.000000, -214.000000)" stroke-width="5">
+            <g id="end-quote" transform="translate(194.000000, 217.000000)">
+                <path d="M113,100 L123.537055,100 L123.537055,122.058824 L163,122.058824 L163,50 L113,-2.84217094e-14 C85.3857625,-2.84217094e-14 63,22.3857625 63,50 C63,77.6142375 85.3857625,100 113,100 Z" id="Oval-Copy-2" stroke="#BFBFBF" fill="#BFBFBF"></path>
+                <path d="M50,100 L60.5370551,100 L60.5370551,122.058824 L100,122.058824 L100,50 L50,-2.84217094e-14 C22.3857625,-2.84217094e-14 0,22.3857625 0,50 C0,77.6142375 22.3857625,100 50,100 Z" id="Oval" stroke="#6C6C6C" fill="#6C6C6C"></path>
+            </g>
+        </g>
+    </g>
+</svg>
