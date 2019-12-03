@@ -20,6 +20,10 @@
   align-items: center;
 }
 
+.header > .links > a {
+  margin: 0 1rem;
+}
+
 .link-item {
   text-decoration: none;
   color: black;
@@ -51,6 +55,14 @@
   max-width: 64px;
 }
 
+.me-img-container {
+  max-width: 650px;
+  max-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+}
+
 .me-img {
   max-height: 100vh;
 }
@@ -64,6 +76,7 @@
 .display-title {
   font-size: 6rem;
   margin: 0;
+  font-weight: 900;
 }
 
 .intro-content {

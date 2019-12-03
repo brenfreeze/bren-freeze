@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Fade } from 'react-reveal'
+import randomQuotes from 'random-quotes'
 
-import Me from '../assets/img/vector.png'
+import { ReactComponent as Me } from '../assets/img/pic.svg'
 import Brand from '../assets/img/ba.svg'
 
 function Home(props) {
+  const [quote] = useState(randomQuotes())
+
   return (
     <div className="home-container">
       <div className="header">
@@ -15,6 +18,22 @@ function Home(props) {
           <Link className="link-item" to="/showcase">
             <span>Showcase</span>
           </Link>
+          {/* <a target="_blank" rel="noopener noreferrer" href="https://facebook.com/brenfreeze" className="link-item">
+            <span>FB</span>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/brenfreeeze" className="link-item">
+            <span>TW</span>
+          </a> */}
+          <a target="_blank" rel="noopener noreferrer" href="mailto:brenfreeze@gmail.com" className="link-item">
+            <span>send mail</span>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/brenfreeze" className="link-item">
+            <span>GH</span>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/bren-aviador/" className="link-item">
+            <span>IN</span>
+          </a>
+
         </div>
       </div>
       <Fade
@@ -24,7 +43,9 @@ function Home(props) {
         ease
         enter={false}
       >
-        <img src={Me} alt="bren aviador" className="me-img" />
+        <div className="me-img-container">
+          <Me className="me-img" />
+        </div>
       </Fade>
 
       <Fade
@@ -43,12 +64,8 @@ function Home(props) {
           </h2>
           <br/><br/>
           <p>
-            Wala pang malagay dito kaya lorem ipsum na lang muna. Siguro baka end of the month pa. Pag may maisip na kong magandang content. 
-            Wala pang malagay dito kaya lorem ipsum na lang muna. Siguro baka end of the month pa. Pag may maisip na kong magandang content. 
-            Wala pang malagay dito kaya lorem ipsum na lang muna. Siguro baka end of the month pa. Pag may maisip na kong magandang content. 
-            Wala pang malagay dito kaya lorem ipsum na lang muna. Siguro baka end of the month pa. Pag may maisip na kong magandang content. 
-            Wala pang malagay dito kaya lorem ipsum na lang muna. Siguro baka end of the month pa. Pag may maisip na kong magandang content. 
-            Wala pang malagay dito kaya lorem ipsum na lang muna. Siguro baka end of the month pa. Pag may maisip na kong magandang content.   
+            <i>"{ quote.body }"</i><br/>
+            <span>- { quote.author }</span>
           </p>
         </div>
       </Fade>

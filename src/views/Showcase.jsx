@@ -34,7 +34,10 @@ function Showcase(props) {
             {
               Array.from(Array(5)).map(() => (
                 <div className="showcase-item">
-
+                  {/* <div className="showcase-img" style={{ backgroundImage: `url('https://picsum.photos/940/450')` }} />
+                  <h1 className="display-title showcase-title">
+                    Ayala Malls
+                  </h1> */}
                 </div>
               ))
             }

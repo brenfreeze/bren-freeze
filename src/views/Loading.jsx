@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import randomQuote from 'random-quotes'
 
 function Loading(props) {
-  const [ quote, setQuote ] = useState(null)
   const { history } = props
   
   useEffect(() => {
