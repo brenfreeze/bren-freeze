@@ -23,15 +23,6 @@ function Loading(props) {
       <p className="center">
         loading...
       </p>
-      {/* <div className="quote">
-        <p>
-          Maybe wars aren't meant to be won,<br />
-          maybe they're meant to be continuous.
-        </p>
-        <span>
-          Elliot Alderson
-        </span>
-      </div> */}
     </div> 
   )
 }
