@@ -12,9 +12,9 @@ function Home(props) {
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
-    axios.get('https://sheets.googleapis.com/v4/spreadsheets/1v1QMEwqgaixNQ6xC8fWYoXQCN2mzAeCGcyHIjTl2MGs/values/A:C',{
+    axios.get(`https://sheets.googleapis.com/v4/spreadsheets/${process.env.REACT_APP_GOOGLE_SHEET_ID}/values/A:C`,{
       params: {
-        key: 'AIzaSyDsWSHy_k0DxIvBOG4J5xCfWpmTDtpeIQU'
+        key: process.env.REACT_APP_GOOGLE_API_KEY
       },
     })
       .then(res => {
