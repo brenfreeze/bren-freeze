@@ -1,14 +1,47 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
 import { Fade } from 'react-reveal'
 import randomQuotes from 'random-quotes'
 import Slider from 'react-slick'
+import axios from 'axios'
 
 import { ReactComponent as Me } from '../assets/img/pic.svg'
 import Brand from '../assets/img/ba.svg'
 
 function Home(props) {
   const [quote] = useState(randomQuotes())
+  const [projects, setProjects] = useState([])
+
+  useEffect(() => {
+    axios.get('https://sheets.googleapis.com/v4/spreadsheets/1v1QMEwqgaixNQ6xC8fWYoXQCN2mzAeCGcyHIjTl2MGs/values/A:C',{
+      params: {
+        key: 'AIzaSyDsWSHy_k0DxIvBOG4J5xCfWpmTDtpeIQU'
+      },
+    })
+      .then(res => {
+        const { values } = res.data
+        const [propNames, ...restValues] = values
+        
+        const transformed = restValues.map((values, index) => {
+          let data = {
+            id: index
+          }
+
+          values.forEach((value, index) => {
+            data = {
+              [propNames[index]]: value,
+              ...data,
+            }
+          })
+
+          return data
+        })
+
+        setProjects(transformed)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }, [ ])
 
   return (
     <>
@@ -91,12 +124,15 @@ function Home(props) {
             arrows={false}
           >
             {
-              Array.from(Array(5)).map(() => (
+              projects.map(({ project_name, project_description, project_image }) => (
                 <div className="showcase-item">
-                  {/* <div className="showcase-img" style={{ backgroundImage: `url('https://picsum.photos/940/450')` }} />
-                  <h1 className="display-title showcase-title">
-                    Ayala Malls
-                  </h1> */}
+                  <div className="showcase-img" style={{ backgroundImage: `url('${project_image}')` }} />
+                  <div className="showcase-content">
+                    <h1 className="display-title showcase-title">
+                      { project_name }
+                    </h1>
+                    <p>{ project_description }</p>
+                  </div>
                 </div>
               ))
             }

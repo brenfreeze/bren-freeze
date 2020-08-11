@@ -18,7 +18,6 @@ class App extends React.Component {
         >
           <Route exact path="/" component={Loading} />
           <Route path="/home" component={Home} />
-          <Route path="/showcase" component={Showcase} />
         </AnimatedSwitch>
       </Router>
     )

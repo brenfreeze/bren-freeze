@@ -89,6 +89,7 @@
   padding-top: 5rem;
 
   display: flex;
+  flex-direction: column;
 }
 
 .section {
@@ -100,6 +101,7 @@
   min-width: 650px;
   max-width: 650px;
   padding-right: 1.5rem;
+  align-self: center;
 }
 
 .section-titles {
