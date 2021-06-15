@@ -18,6 +18,7 @@ class App extends React.Component {
         >
           <Route exact path="/" component={Loading} />
           <Route path="/home" component={Home} />
+          <Route path="/029aeb20069db7e7ce15b6319d0881c3.html" component={() => <h1>Hello</h1>} />
         </AnimatedSwitch>
       </Router>
     )
